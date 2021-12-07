@@ -1,3 +1,9 @@
  pylint
  pytest
  black
+joblib
+pandas
+seaborn
+matplotlib.pyplot
+sklearn
+numpy
