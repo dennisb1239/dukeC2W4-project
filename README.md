@@ -1,2 +1,4 @@
 # dukeC2W4-project
-Abschlussarbeit für Kurs 2 W4 - Duke Cloud Computing 
+### Final project for course 2 of the duke cloud computing specialization
+
+
