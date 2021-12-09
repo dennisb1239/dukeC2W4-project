@@ -19,11 +19,11 @@ def home():
 """
 @app.route("/predict", methods=['POST'])
 def predict():
-    """Predicts the Height of MLB Players"""
+    """Predicts the price of a given house"""
     
     json_payload = request.json
     LOG.info(f"JSON payload: {json_payload}")
-    prediction = mlib.predict(json_payload['Weight'])
+    prediction = mlib.predict(json_payload['OverallQual'])
     return jsonify({'prediction': prediction})
 """
 if __name__ == "__main__":
