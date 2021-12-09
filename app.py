@@ -14,7 +14,7 @@ LOG.setLevel(logging.INFO)
 
 @app.route("/")
 def home():
-    html = f"<h3>Predict the house price from its overall quality</h3>"
+    html = "<h3>Predict the house price from its overall quality</h3>"
     return html.format(format)
 
 @app.route("/predict", methods=['POST'])
