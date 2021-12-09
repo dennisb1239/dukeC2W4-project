@@ -7,11 +7,6 @@ test:
 		python -m pytest -vv 
 
 
-
-format: 
-		black *.py 
-
-
 lint: 
 		pylint --disable=R,C
 		#lint Dockerfile
