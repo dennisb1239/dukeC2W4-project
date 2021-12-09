@@ -14,8 +14,8 @@ format:
 
 lint: 
 		pylint --disable=R,C
-		lint Dockerfile
-		docker run --rm -i hadolint/hadolint < Dockerfile
+		#lint Dockerfile
+		#docker run --rm -i hadolint/hadolint < Dockerfile
 
 
 
