@@ -16,7 +16,7 @@ LOG.setLevel(logging.INFO)
 def home():
     html = f"<h3>Predict the house price from its overall quality</h3>"
     return html.format(format)
-"""
+
 @app.route("/predict", methods=['POST'])
 def predict():
     """Predicts the price of a given house"""
@@ -25,6 +25,6 @@ def predict():
     LOG.info(f"JSON payload: {json_payload}")
     prediction = mlib.predict(json_payload['OverallQual'])
     return jsonify({'prediction': prediction})
-"""
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)
