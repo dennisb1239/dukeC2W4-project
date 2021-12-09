@@ -3,7 +3,6 @@ pytest
 joblib
 pandas
 seaborn
-matplotlib.pyplot
 sklearn
 numpy
 flask
