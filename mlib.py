@@ -23,18 +23,16 @@ def load_model(model="model.joblib"):
 
 
 def data():
-    df = pd.read_csv("htwtmlb.csv")
+    df = pd.read_csv("train.csv")
     return df
 
 
 def retrain(tsize=0.1, model_name="model.joblib"):
-    """Retrains the model
-    See this notebook: Baseball_Predictions_Export_Model.ipynb
-    """
+    # Retrains the model
     df = data()
-    y = df["Height"].values  # Target
+    y = df["SalePrice"].values  # Target
     y = y.reshape(-1, 1)
-    X = df["Weight"].values  # Feature(s)
+    X = df["OverallQual"].values  # Feature(s)
     X = X.reshape(-1, 1)
     scaler = StandardScaler()
     X_scaler = scaler.fit(X)
@@ -64,7 +62,7 @@ def scale_input(val):
     """Scales input to training feature values"""
 
     df = data()
-    features = df["Weight"].values
+    features = df["OverallQual"].values
     features = features.reshape(-1, 1)
     input_scaler = StandardScaler().fit(features)
     scaled_input = input_scaler.transform(val)
@@ -75,7 +73,7 @@ def scale_target(target):
     """Scales Target 'y' Value"""
 
     df = data()
-    y = df["Height"].values  # Target
+    y = df["SalePrice"].values  # Target
     y = y.reshape(-1, 1)  # Reshape
     scaler = StandardScaler()
     y_scaler = scaler.fit(y)
