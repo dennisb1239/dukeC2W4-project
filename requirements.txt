@@ -1,9 +1,10 @@
- pylint
- pytest
- black
+pylint
+pytest
+black
 joblib
 pandas
 seaborn
 matplotlib.pyplot
 sklearn
 numpy
+flask
