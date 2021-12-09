@@ -1,6 +1,6 @@
 install: 
-	apt install python3-pip
-	pip install pip && pip install -r requirements.txt
+	sudo apt install python3-pip
+	pip install --upgpip && pip install -r requirements.txt
 				
 
 test:
