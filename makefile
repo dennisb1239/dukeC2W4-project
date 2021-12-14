@@ -14,4 +14,4 @@ lint:
 
 
 
-all: install lint test
+all: install lint
