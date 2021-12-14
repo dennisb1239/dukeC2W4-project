@@ -106,6 +106,7 @@ def predict(OverallQual):
 
     clf = load_model()  # loadmodel
     np_array_weight = format_input(OverallQual)
+    print(np_array_weight)
     scaled_input_result = scale_input(np_array_weight)  # scale feature input
     scaled_height_prediction = clf.predict(scaled_input_result)  # scaled prediction
     height_predict = scale_target(scaled_height_prediction)
