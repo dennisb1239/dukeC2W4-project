@@ -14,7 +14,7 @@ def predictcli(OverallQual):
     """Predicts the sales prive of a house, based on its overall quality"""
 
     result = predict(OverallQual)
-    click.echo(click.style(result, bg = "green", fg = "white")
+    click.echo(click.style(result, bg = "green", fg = "white"))
 
 if __name__ == "__main__":
     # pylint: disable=no-value-for-parameter
