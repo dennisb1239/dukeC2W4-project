@@ -8,7 +8,7 @@ test:
 
 
 lint: 
-		pylint --disable=R,C,W1203,E1101 mlib cli
+		pylint mlib cli
 		#lint Dockerfile
 		#docker run --rm -i hadolint/hadolint < Dockerfile
 
