@@ -111,7 +111,7 @@ def predict(OverallQual):
     height_predict = scale_target(scaled_height_prediction)
     payload = human_readable_payload(height_predict)
     predict_log_data = {
-        "weight": OverallQual,
+        "overallqual": OverallQual,
         "scaled_input_result": scaled_input_result,
         "scaled_height_prediction": scaled_height_prediction,
         "height_predict": height_predict,
