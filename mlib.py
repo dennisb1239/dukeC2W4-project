@@ -101,17 +101,17 @@ def human_readable_payload(predict_value):
     return result
 
 
-def predict(weight):
-    """Takes weight and predicts height"""
+def predict(OverallQual):
+    """Takes overall house quality and returns sale price"""
 
     clf = load_model()  # loadmodel
-    np_array_weight = format_input(weight)
+    np_array_weight = format_input(OverallQual)
     scaled_input_result = scale_input(np_array_weight)  # scale feature input
     scaled_height_prediction = clf.predict(scaled_input_result)  # scaled prediction
     height_predict = scale_target(scaled_height_prediction)
     payload = human_readable_payload(height_predict)
     predict_log_data = {
-        "weight": weight,
+        "weight": OverallQual,
         "scaled_input_result": scaled_input_result,
         "scaled_height_prediction": scaled_height_prediction,
         "height_predict": height_predict,
